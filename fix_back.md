@@ -1,9 +1,9 @@
 # 修正内容を元に戻すコマンド
 
-# Gitのファイル登録状態
+## 0.1 Gitのファイル登録状態
 working Directory → Stage(Index) → History
 
-## 戻す場合のコマンド概要
+## 0.2 戻す場合のコマンド概要
 History → Stage(Index): git reset -- files
 Stage(Index) → workingDir: git checkout -- files
 
@@ -44,7 +44,7 @@ git reset --soft # commitを削除、indexと修正内容は残る
 オプションなしは--mixedと同等。HEADの位置とインデックスを変更する  
 該当コミットのハッシュ値はreflogやlogから調査可能
 
-## 抹消されたログでもreflogには存在。一度記録したことなら戻せる
+## 3.1 抹消されたログでもreflogには存在。一度記録したことなら戻せる
 ```
 $ git reset --hard HEAD^^ # 戻しすぎた
 $ git reflog
