@@ -1,5 +1,7 @@
 # 修正内容を元に戻すコマンド
 
+# 0 Gitの履歴管理
+
 ## 0.1 Gitのファイル登録状態
 working Directory → Stage(Index) → History
 
