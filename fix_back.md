@@ -34,7 +34,7 @@ git clean -n
 git clean -f ＜対象ファイル＞
 ```
 
-# 3. Stageファイル
+# 3. Stageファイル(Index)
 ```git
 git reset . # commit,indexを削除、修正内容は残る
 git reset --hard @ # 前回のコミット時点に戻す
@@ -42,6 +42,8 @@ git reset --hard @^ # 一つ前のコミット時点に戻す
 git reset --hard [該当コミットのハッシュ値] # 指定コミットに戻す
 git checkout [該当コミットのハッシュ値] 元に戻すファイルパス # git reset --hardと同じ動作。こっちの方が安全
 git reset --soft # commitを削除、indexと修正内容は残る
+git rm --cached <FILE_NAME> # インデックスからのみファイルを削除する（追跡対象からはずす）
+
 ```
 オプションなしは--mixedと同等。HEADの位置とインデックスを変更する  
 該当コミットのハッシュ値はreflogやlogから調査可能
